@@ -1,0 +1,63 @@
+﻿@model List<Game>
+
+<section class="section-listar-game">
+    <h1>Listas de <span class="slogan-home">Jogos</span></h1>
+    <div class="content-alert-sucess" id="content-alert-sucess">
+        <p id="alert-message">@TempData["msg"]</p>
+    </div>
+
+    <div class="container-buttons">
+        <a asp-action="cadastrar" class="button-link-cadastrar">Cadastrar Novo</a>
+        <a asp-action="Index" class="button-back-list">Voltar a Lista de Jogos</a>
+    </div>
+
+    <div class="content-table">
+        <table class="table">
+            <tr class="table-head">
+                <th class="table-title">Nome</th>
+                <th class="table-title">Descrição</th>
+                <th class="table-title">Gênero</th>
+                <th class="table-title">Data de Lançamento</th>
+                <th class="table-title">Valor</th>
+                <th class="table-title">Data de Criação</th>
+            </tr>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td class="table-content">@c.Nome</td>
+                    <td class="table-content">@c.Descricao</td>
+                    <td class="table-content">@c.Genero</td>
+                    <td class="table-content">@c.DataLancamento</td>
+                    <td class="table-content">R$ @c.Valor?.ToString("N2")</td>
+                    <td class="table-content">@c.DataCreated</td>
+                    <td class="table-content">
+                        <div class="button-container">
+                            <a asp-action="editar" class="button-link-editar" asp-route-id="@c.GameId">Editar</a>
+                            <a class="button-link-remover" onclick="gameId.value = @c.GameId">Remover</a>
+                        </div>                        
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</section>
+
+<div class="confirm-overlay">
+    <div class="confirm-content">
+        <div class="confirm-header">
+            <h5 class="confirm-title">Confirmação</h5>
+            <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">X</button>
+        </div>
+        <div class="confirm-body">
+            Deseja realmente apagar o jogo?
+        </div>
+        <div class="confirm-footer">
+            <form asp-action="remover">
+                <input name="id" type="hidden" id="gameId" />
+                <button type="button" class="button-confirm" onclick="hideConfirmOverlay()">Não</button>
+                <button type="submit" class="button-confirm" id="button-submit" onclick="hideConfirmOverlay(); showAlertMessage">Sim</button>
+            </form>
+        </div>
+    </div>
+</div>

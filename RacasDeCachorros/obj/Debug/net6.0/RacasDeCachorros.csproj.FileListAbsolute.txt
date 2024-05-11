@@ -1,0 +1,7 @@
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.GeneratedMSBuildEditorConfig.editorconfig
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.AssemblyInfoInputs.cache
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.AssemblyInfo.cs
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.csproj.CoreCompileInputs.cache
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.MvcApplicationPartsAssemblyInfo.cache
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.RazorAssemblyInfo.cache
+C:\WorkSpaces\RacasDeCachorros\RacasDeCachorros\obj\Debug\net6.0\RacasDeCachorros.RazorAssemblyInfo.cs
